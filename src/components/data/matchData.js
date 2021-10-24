@@ -39,4 +39,4 @@ const matchData = [
   }
 ]
 
-export default matchData
+export default matchData;
