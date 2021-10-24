@@ -1,6 +1,6 @@
 
 
-const match_data = [
+const matchData = [
   {
     matchNumber: 1,
     players: ["Disguised Lizard", "DrSpiteful"],
@@ -38,3 +38,5 @@ const match_data = [
     scoreDifference: undefined
   }
 ]
+
+export default matchData
