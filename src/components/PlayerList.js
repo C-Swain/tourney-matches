@@ -1,19 +1,21 @@
 import React from 'react'; //optional
-import playerData from './data/playerData';
-import matchData from './data/matchData';
 import Player from './Player';
-import { preparePlayerData, addWinsToPlayers } from '../helpers/playerHelpers';
+import playerData from './data/playerData';
+import { preparePlayerData , addWinsToPlayers } from '../helpers/playerHelpers';
+import matchData from './data/matchData';
+
 
 function PlayerList(props) {
-  const playerDataArray = preparePlayerData(playerData);
-  const parsedPlayerData = addWinsToPlayers(playerDataArray, matchData);
-  
+  const preparedPlayerData = preparePlayerData(playerData);
+  const parsedPlayerData = addWinsToPlayers(preparedPlayerData, matchData);
+
+  const parsedPlayers = parsedPlayerData.map(player => <Player key={player.gamerTag} {...player} />);
+
   return (
-  <section className="PlayerList">
-  <h1>Current participating players</h1>
-  <Player />
-</section>
+    <section className="PlayerList">
+      <h1>Current participating players</h1>
+      { parsedPlayers }
+    </section>
   );
-  }
-  
+}
   export default PlayerList;

@@ -1,7 +1,8 @@
 import MatchList from './components/MatchList';
 import PlayerList from './components/PlayerList';
-import Player from './components/Player';
-import Match from './components/Match';
+import matchData from './components/data/matchData';
+import playerData from './components/data/playerData';
+import { preparePlayerData, addWinsToPlayers } from './helpers/playerHelpers';
 import './App.css';
 
 function App() {
