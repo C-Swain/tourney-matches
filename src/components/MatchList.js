@@ -1,12 +1,13 @@
 import React from 'react'; //optional
 import Match from './Match';
+import matchData from './data/matchData';
 
 
 function MatchList(props) {
-  const { matchData } = props;
-  const oneMatch = matchData[0];
+  
+ 
   const parsedMatches = matchData.map(match => <Match  {...match} />);
-
+  
   return (
     <section className="PlayerList MatchList">
       <h1>Match list</h1>
