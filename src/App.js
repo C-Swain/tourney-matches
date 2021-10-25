@@ -6,11 +6,13 @@ import { preparePlayerData, addWinsToPlayers } from './helpers/playerHelpers';
 import './App.css';
 
 function App() {
+  const preparedPlayerData = preparePlayerData(playerData);
+  const parsedPlayerData = addWinsToPlayers(preparedPlayerData,matchData)
   return (
     <div className="App">
     <h1>Tourney Matches <span>Where Coding and Tournaments found their Match!</span></h1>
-    <PlayerList />
-    <MatchList />
+    <PlayerList parsedPlayerData= {parsedPlayerData} />
+    <MatchList matchData={matchData} />
     </div>
   );
 }
